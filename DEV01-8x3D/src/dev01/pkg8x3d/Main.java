@@ -27,18 +27,18 @@ public class Main extends PApplet {
     //ArrayLists
     private ArrayList<PVector> results = new ArrayList();
     private final ArrayList<PVector> mappings = new ArrayList();
+    //Integers
+    int frames = 8;
+    int limit = 500;
     //Floats
     private final float START_X = 92799f;
     private final float START_Y = 436964f;
-    private final float MIN_X = START_X - 1000f;
-    private final float MAX_X = START_X + 1000f;
-    private final float MIN_Y = START_Y - 1000f;
-    private final float MAX_Y = START_Y + 1000f;
+    private final float MIN_X = START_X - limit;
+    private final float MAX_X = START_X + limit;
+    private final float MIN_Y = START_Y - limit;
+    private final float MAX_Y = START_Y + limit;
     float waterLevel = -5f;
     float raiseWater = 0.100f;
-    //Integers
-    int frames = 8;
-    int limit = 1000;
     //Logger
     final Logger logger = Logger.getLogger(Main.class);
     //Booleans
@@ -256,7 +256,7 @@ public class Main extends PApplet {
             default:
                 frames = 6;
                 pause = false;
-                limit = 1000;
+                limit = 500;
                 break;
         }
     }
